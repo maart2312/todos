@@ -12,7 +12,7 @@
       <h1><label for="Todos" style="color:#FF0033">TODOs</label></h1>
           <div ng-controller = "AddContactController">
             <div class="form-group">
-              <input for="word"type="text" class="form-control" id="word" name="word" style="width:600px; height:40px" placeholder="What Is To Be Done ?"ng-model= "word"> </br>
+              <input type="text" class="form-control" id="text" name="text" style="width:600px; height:40px" placeholder="What Is To Be Done ?"ng-model= "text"> </br>
               <button type="button" class="btn btn-success" ng-click="save()" >Submit</button>
             </div>
           </div>
@@ -27,7 +27,7 @@
                 <tbody>
                   <tr ng-repeat = "contact in contacts">
                     <td></td>
-                    <td></td>
+                    <td>{{contact.text}}</td>
                     <td></td>
                   </tr>
                 </tbody>
