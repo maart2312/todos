@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "ContactApp">
   <head>
     <meta charset="utf-8">
     </br>
@@ -10,10 +10,11 @@
   <body>
     <center>
       <h1><label for="Todos" style="color:#FF0033">TODOs</label></h1>
-
-          <div class="form-group">
-            <input type="text" class="form-control" id="text" style="width:600px; height:40px" placeholder="What Is To Be Done ?"> </br>
-            <button type="button" class="btn btn-success" ng-click="add()" >Submit</button>
+          <div ng-controller = "AddContactController">
+            <div class="form-group">
+              <input for="word"type="text" class="form-control" id="word" name="word" style="width:600px; height:40px" placeholder="What Is To Be Done ?"ng-model= "word"> </br>
+              <button type="button" class="btn btn-success" ng-click="save()" >Submit</button>
+            </div>
           </div>
           <div ng-controller="ListTodoController">
             <table class="table table-bordered" style="width:1000px; height:40px">
@@ -23,6 +24,13 @@
                   <th style="width:500px; height:20px"><center>Text</center></th>
                   <th style="width:300px; height:20px"><center>Status</center></th>
                 </tr>
+                <tbody>
+                  <tr ng-repeat = "contact in contacts">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
               </thead>
             </table>
           </div>
