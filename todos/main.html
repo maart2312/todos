@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html ng-app = "ContactApp">
+<html ng-app = "ContactApp" >
   <head>
     <meta charset="utf-8">
     </br>
     <title> TODOs </title>
      <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
-
   <body>
     <center>
-      <h1><label for="Todos" style="color:#FF0033">TODOs</label></h1>
+      <h1><label for="Todos" style="color:#000000">TODOs</label></h1>
           <div ng-controller = "AddContactController">
             <div class="form-group">
               <input type="text" class="form-control" id="text" name="text" style="width:600px; height:40px" placeholder="What Is To Be Done ?"ng-model= "text"> </br>
@@ -17,8 +16,8 @@
             </div>
           </div>
           <div ng-controller="ListTodoController">
-            <table class="table table-bordered" style="width:1000px; height:40px">
-              <thead>
+            <table class="table table-striped" border ="3"  style="width:1000px; height:40px">
+              <thead >
                 <tr>
                   <th style="width:200px; height:20px"><center>Checkbox</center></th>
                   <th style="width:500px; height:20px"><center>Text</center></th>
