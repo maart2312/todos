@@ -1,7 +1,7 @@
 angular.module('ContactApp', [])
   .service('contactService', function (){
     var self = this
-    self.contacts = [ {text : 'asdasd'},{text : 'asdasd'},{text : 'asdasd'},{text : 'asdasd'},{text : 'asdasd'}
+    self.contacts = [ {text : 'Test'},{text : 'Test 1'}
     ]
     self.list = function (){
       return self.contacts

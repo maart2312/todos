@@ -25,9 +25,14 @@
                 </tr>
                 <tbody>
                   <tr ng-repeat = "contact in contacts">
-                    <td></td>
+                    <td>
+                      <div class="checkbox">
+                          <label>
+                          <center><input type="checkbox" ng-model="done" ng-true-value="'Complete'" ng-false-value="''"></center>
+                        </label>
+                      </div></td>
                     <td>{{contact.text}}</td>
-                    <td></td>
+                    <td> {{ done }} </td>
                   </tr>
                 </tbody>
               </thead>
