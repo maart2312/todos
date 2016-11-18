@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html ng-app = "ContactApp" >
+<html ng-app = "TodoApp" >
   <head>
-    <meta charset="utf-8">
-    </br>
+    <meta charset="utf-8"></br>
     <title> TODOs </title>
-     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
     <center>
       <h1><label for="Todos" style="color:#000000">TODOs</label></h1>
-          <div ng-controller = "AddContactController">
+          <div ng-controller = "AddDataController">
             <div class="form-group">
               <input type="text" class="form-control" id="text" name="text" style="width:600px; height:40px" placeholder="What Is To Be Done ?"ng-model= "text"> </br>
               <button type="button" class="btn btn-success" ng-click="save()" >Submit</button>
@@ -24,21 +23,17 @@
                   <th style="width:300px; height:20px"><center>Status</center></th>
                 </tr>
                 <tbody>
-                  <tr ng-repeat = "contact in contacts">
+                  <tr ng-repeat = "data in datas">
                     <td>
-                      <div class="checkbox">
-                          <label>
-                          <center><input type="checkbox" ng-model="done" ng-true-value="'Complete'" ng-false-value="''"></center>
-                        </label>
-                      </div></td>
-                    <td>{{contact.text}}</td>
+                      <div class="checkbox"><label><center><input type="checkbox" ng-model="done" ng-true-value="'Complete'" ng-false-value="''"></center></label></div>
+                    </td>
+                    <td>{{data.text}}</td>
                     <td> {{ done }} </td>
                   </tr>
                 </tbody>
               </thead>
             </table>
           </div>
-
     </center>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

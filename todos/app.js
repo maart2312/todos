@@ -1,29 +1,25 @@
-angular.module('ContactApp', [])
-  .service('contactService', function (){
+angular.module('TodoApp', [])
+  .service('todoService', function (){
     var self = this
-    self.contacts = [ {text : 'Test'},{text : 'Test 1'}
+    self.datas = [ {text : 'Test'},{text : 'Test 1'}
     ]
     self.list = function (){
-      return self.contacts
+      return self.datas
     }
-    self.add =  function(contact){
-      self.contacts.push(contact)
+    self.add =  function(data){
+      self.datas.push(data)
     }
-    self.checkclick = function(){
-
-    }
-
   })
-  .controller('AddContactController' , function ($scope,contactService){
+  .controller('AddDataController' , function ($scope,todoService){
     $scope.save = function () {
-      var contact = { text: $scope.text}
-      contactService.add(contact)
+      var data = { text: $scope.text}
+      todoService.add(data)
       resetform()
     }
     function resetform(){
      $scope.text = ''
     }
   })
-  .controller('ListTodoController', function ($scope,contactService){
-      $scope.contacts = contactService.list()
+  .controller('ListTodoController', function ($scope,todoService){
+      $scope.datas = todoService.list()
   })
